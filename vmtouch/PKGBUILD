@@ -10,9 +10,10 @@ license=('BSD')
 source=("https://github.com/hoytech/$pkgname/archive/v$pkgver.tar.gz")
 md5sums=('46c153c48ab035d37d16e8bc1587e8d8')
 depends=('glibc')
-makedepends=('perl' 'pod2man')
+makedepends=('perl')
 
 build() {
+  export PATH="/usr/bin/core_perl:$PATH"
   cd "vmtouch-$pkgver"
   gcc -Wall -O3 -o vmtouch vmtouch.c
   pod2man --section 8 vmtouch.pod > vmtouch.8
