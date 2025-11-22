@@ -19,4 +19,3 @@ sed -i "/makedepends=/s/(/\('pod2man\' /" $pkgbuildFile
 #   sleep infinity
 # }
 # cancel
-
